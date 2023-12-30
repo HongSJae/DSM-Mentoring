@@ -1,20 +1,30 @@
 import SwiftUI
+import GroupActivities
 
 struct ContentView: View {
-    @State var count = 0
+    @StateObject var groupActivitiesMenager: GroupActivitiesMenager = .init()
+    @StateObject var groupStateObserver = GroupStateObserver()
+
     var body: some View {
         VStack {
-            Text("\(count)")
-                .foregroundStyle(.white)
+            Text("\(groupActivitiesMenager.count)")
 
             HStack {
-                Button("up") { count += 1 }
+                Button("up", action: groupActivitiesMenager.plus)
 
-                Button("down") { count -= 1 }
+                Button("down", action: groupActivitiesMenager.minus)
+            }
+
+            if groupActivitiesMenager.session == nil &&
+                groupStateObserver.isEligibleForGroupSession {
+                Button("SHARE", action: groupActivitiesMenager.startingSharing)
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.black)
+        .task {
+            for await session in CounterTogether.sessions() {
+                groupActivitiesMenager.configureGroupSession(session)
+            }
+        }
     }
 }
 

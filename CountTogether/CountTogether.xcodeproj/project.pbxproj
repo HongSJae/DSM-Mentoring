@@ -11,6 +11,9 @@
 		90D6D5882B3F9D2500030D4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6D5872B3F9D2500030D4A /* ContentView.swift */; };
 		90D6D58A2B3F9D2600030D4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D6D5892B3F9D2600030D4A /* Assets.xcassets */; };
 		90D6D58D2B3F9D2600030D4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D6D58C2B3F9D2600030D4A /* Preview Assets.xcassets */; };
+		90D6D5942B3FA1E700030D4A /* CounterTogether.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6D5932B3FA1E700030D4A /* CounterTogether.swift */; };
+		90D6D5972B3FA58D00030D4A /* CountMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6D5962B3FA58D00030D4A /* CountMessage.swift */; };
+		90D6D5992B3FA68600030D4A /* GroupActivitiesMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D6D5982B3FA68600030D4A /* GroupActivitiesMenager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,10 @@
 		90D6D5872B3F9D2500030D4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		90D6D5892B3F9D2600030D4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90D6D58C2B3F9D2600030D4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		90D6D5932B3FA1E700030D4A /* CounterTogether.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterTogether.swift; sourceTree = "<group>"; };
+		90D6D5962B3FA58D00030D4A /* CountMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountMessage.swift; sourceTree = "<group>"; };
+		90D6D5982B3FA68600030D4A /* GroupActivitiesMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupActivitiesMenager.swift; sourceTree = "<group>"; };
+		90D6D59A2B3FABAB00030D4A /* CountTogether.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CountTogether.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +58,11 @@
 		90D6D5842B3F9D2500030D4A /* CountTogether */ = {
 			isa = PBXGroup;
 			children = (
+				90D6D59A2B3FABAB00030D4A /* CountTogether.entitlements */,
+				90D6D5952B3FA57500030D4A /* Model */,
 				90D6D5852B3F9D2500030D4A /* CountTogetherApp.swift */,
 				90D6D5872B3F9D2500030D4A /* ContentView.swift */,
+				90D6D5982B3FA68600030D4A /* GroupActivitiesMenager.swift */,
 				90D6D5892B3F9D2600030D4A /* Assets.xcassets */,
 				90D6D58B2B3F9D2600030D4A /* Preview Content */,
 			);
@@ -65,6 +75,15 @@
 				90D6D58C2B3F9D2600030D4A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		90D6D5952B3FA57500030D4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				90D6D5932B3FA1E700030D4A /* CounterTogether.swift */,
+				90D6D5962B3FA58D00030D4A /* CountMessage.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D6D5942B3FA1E700030D4A /* CounterTogether.swift in Sources */,
+				90D6D5972B3FA58D00030D4A /* CountMessage.swift in Sources */,
 				90D6D5882B3F9D2500030D4A /* ContentView.swift in Sources */,
+				90D6D5992B3FA68600030D4A /* GroupActivitiesMenager.swift in Sources */,
 				90D6D5862B3F9D2500030D4A /* CountTogetherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,9 +291,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CountTogether/CountTogether.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CountTogether/Preview Content\"";
+				DEVELOPMENT_TEAM = Z25H7B85Z8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -297,9 +321,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CountTogether/CountTogether.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CountTogether/Preview Content\"";
+				DEVELOPMENT_TEAM = Z25H7B85Z8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
